@@ -25,8 +25,8 @@ if [ $(id -u) = 0 ]; then
         echo ""
         echo "pid $ARG command name and cmdline"
         echo "###################################"
-        ls -laR /proc/$ARG/comm
-        ls -laR /proc/$ARG/cmdline
+        strings /proc/$ARG/comm
+        strings /proc/$ARG/cmdline
         
         echo ""
         echo "pid $ARG path"
